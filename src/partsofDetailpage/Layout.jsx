@@ -8,17 +8,36 @@ import './assets/layout.css';
 
 function Layout() {
   return (
-    <div className="layout-container">
-      <div className="left-content">
-        <Outlet />
+    <>
+      {/* Full-sized image with centered text overlay */}
+      <div className="full-size-image-container">
+        <img
+          src="https://dreamypixel.com/wp-content/uploads/2016/01/sunrise-in-the-hills.jpg" // Replace with your image URL
+          alt="Full Size Content"
+          className="full-size-image"
+        />
+        <div className="text-overlay">
+          <h1>Blog</h1> {/* "Blog" text centered on the image */}
+          <p className="home-blog">Home / Blog</p> {/* "Home / Blog" text below "Blog" */}
+        </div>
       </div>
-      <div className="right-content">
-        <Table1 />
-        <Table2 />
-        <Table3 />
-        <Table4 />
+
+      {/* Main Layout */}
+      <div className="layout-container">
+        {/* Left Content */}
+        <div className="left-content">
+          <Outlet />
+        </div>
+
+        {/* Right Content - Tables */}
+        <div className="right-content">
+          <Table1 />
+          <Table2 />
+          <Table3 />
+          <Table4 />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
