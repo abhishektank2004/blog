@@ -14,14 +14,14 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
       <Routes>
         {/* Route for Landing Page Layout */}
-        <Route path="/" element={<LayoutfirstPage />}>
+        {/* <Route path="/" element={<LayoutfirstPage />}>
         <Route index element={<First_Page />} />
-        </Route>
+        </Route> */}
 
         {/* Route for Details Page Layout */}
-        {/* <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<DetailPage />} />
-        </Route> */}
+        </Route>
       </Routes>
     </BrowserRouter>
   </>

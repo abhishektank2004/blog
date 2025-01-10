@@ -35,6 +35,21 @@ function DetailPage() {
           <p>{section.content}</p>
         </section>
       ))}
+
+{sections.map((section, index) => (
+        <section key={index}>
+          <h2>{section.title}</h2>
+          <p>{section.content}</p>
+        </section>
+      ))}
+
+{sections.map((section, index) => (
+        <section key={index}>
+          <h2>{section.title}</h2>
+          <p>{section.content}</p>
+        </section>
+      ))}
+
     </>
   );
 }
