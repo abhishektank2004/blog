@@ -9,10 +9,15 @@
 
 /* Left Side - All Tables (25% width) */
 .left-side-container {
-  margin-top: 85px;
+  margin-top: 100px;
   width: 25%; /* Take 25% of the width */
   padding: 10px; /* Padding for the left side */
   box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+.right-content{
+  margin-right: 90px;
+  margin-top: 80px;
 }
 
 /* Right Side - Middle Content (75% width) */
@@ -68,6 +73,22 @@ th, td {
   padding: 10px;
   background: #fff; /* Optional: Adds a background color to separate from other content */
   z-index: 10; /* Ensure it stays on top */
+}
+
+/* Responsive Adjustments for Larger Screens (Above 2000px) */
+@media (min-width: 2000px) {
+  .layout-container {
+    margin-left: 10px; /* Add 10px margin to the left side */
+    margin-right: 10px; /* Add 10px margin to the right side */
+  }
+
+  .left-side-container {
+    margin-left: 10px; /* Add 10px margin to the left side */
+  }
+
+  .middle-content-container {
+    margin-right: 10px; /* Add 10px margin to the right side */
+  }
 }
 
 /* Responsive Adjustments for Larger Screens */
@@ -140,4 +161,3 @@ th, td {
     bottom: auto; /* Disable sticky positioning for small screens */
   }
 }
-
