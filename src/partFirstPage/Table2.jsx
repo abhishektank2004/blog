@@ -2,7 +2,8 @@ import React from "react";
 
 function Teble2() {
   const containerStyle = {
-    width: "320px",
+    width: "100%",
+    maxWidth: "450px",
     background: "#f8f7fd",
     padding: "30px",
     borderRadius: "16px",
@@ -10,7 +11,7 @@ function Teble2() {
     fontFamily: "Arial, sans-serif",
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: "90%", // For responsiveness on smaller screens
+    boxSizing: "border-box",
   };
 
   const sectionStyle = {
@@ -61,7 +62,7 @@ function Teble2() {
     width: "15px",
     height: "15px",
     backgroundColor: "#224872FF",
-    borderRadius: "70%",
+    borderRadius: "50%",
   };
 
   const middleLineStyle = {
