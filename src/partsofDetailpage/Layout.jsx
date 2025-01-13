@@ -10,11 +10,14 @@ function Layout() {
   return (
     <>
       {/* Full-sized image with centered text overlay */}
-      <div className="full-size-image-container">
+      <div className="full-size-image-container" style={{ position: 'relative' }}>
         <img
           src="https://dreamypixel.com/wp-content/uploads/2016/01/sunrise-in-the-hills.jpg"
           alt="Full Size Content"
-          className="full-size-image"
+          style={{
+            width: '100%', // Always 100% width
+            objectFit: 'cover', // Maintain aspect ratio
+          }}
         />
         <div className="text-overlay">
           <h1>Blog</h1>

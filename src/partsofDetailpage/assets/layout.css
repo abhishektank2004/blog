@@ -1,18 +1,18 @@
 /* General Layout */
 .layout-container {
   display: flex;
-  min-height: 100vh; /* Ensure the full height of the viewport */
-  gap: 0; /* No gap between sections */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  overflow-y: auto; /* Enable vertical scrolling for the entire layout */
+  min-height: 100vh;
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-y: auto;
 }
 
 /* Left Side - All Tables (25% width) */
 .left-side-container {
   margin-top: 100px;
-  width: 25%; /* Take 25% of the width */
-  padding: 10px; /* Padding for the left side */
-  box-sizing: border-box; /* Include padding in width/height calculation */
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .right-content {
@@ -23,173 +23,75 @@
 
 /* Right Side - Middle Content (75% width) */
 .middle-content-container {
-  width: 75%; /* Take 75% of the width */
-  padding: 10px; /* Padding for middle content */
-  box-sizing: border-box; /* Include padding in width/height calculation */
+  width: 75%;
+  padding: 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align items at the top */
-  overflow-y: auto; /* Ensure scrolling if needed */
-  position: relative; /* To support absolute positioning of Table4 */
-}
-
-/* Outlet Content - Center Image */
-.outlet-content {
-  display: flex;
-  justify-content: center; /* Center the content */
-  align-items: center;
-  width: 100%; /* Full width */
-  height: auto; /* Allow the height to adjust based on content */
-}
-
-.shared-image {
-  width: 80%; /* Adjust the width of the image */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image fits without cutting */
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* General Table Styles */
-table {
-  width: 100%; /* Ensure table takes full width */
-  border-collapse: collapse;
+  justify-content: flex-start;
+  overflow-y: auto;
   position: relative;
-  margin-bottom: 10px; /* Optional: space between tables */
 }
 
-table, th, td {
-  border: 1px solid black;
+/* Centered Text Overlay */
+.text-overlay {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-th, td {
-  padding: 5px; /* Padding for table cells */
-  text-align: left;
-}
-
-
-/* Table4 - Fixed at the bottom of the right side (No scrolling) */
-.table4-container {
-  position: fixed; /* Fixed positioning */
-  bottom: 0; /* Fixed at the bottom */
-  width: 75%; /* Same width as right side */
-  left: 25%; /* Align with the left side */
-  padding: 10px;
-  background: #fff; /* Optional: Adds a background color to separate from other content */
-  z-index: 10; /* Ensure it stays on top */
-}
-
-/* Responsive Adjustments for Larger Screens (Above 2000px) */
-@media (min-width: 2000px) {
-  .layout-container {
-    margin-left: 10px; /* Add 10px margin to the left side */
-    margin-right: 10px; /* Add 10px margin to the right side */
-  }
-
-  .left-side-container {
-    margin-left: 10px; /* Add 10px margin to the left side */
-  }
-
-  .middle-content-container {
-    margin-right: 10px; /* Add 10px margin to the right side */
+/* Responsive Adjustments for Large Screens */
+@media (min-width: 2560px) {
+  .full-size-image-container img {
+    height: 40vh; /* Fixed height for large screens */
   }
 }
 
-/* Responsive Adjustments for Larger Screens */
-@media (min-width: 1024px) {
-  .layout-container {
-    flex-wrap: nowrap; /* Ensure no wrapping */
-  }
-
-  .middle-content-container {
-    padding: 15px; /* Increased padding for larger screens */
-  }
-
-  .left-side-container {
-    padding: 15px; /* Padding for the left side */
+/* Responsive Adjustments for Laptops */
+@media (min-width: 1280px) and (max-width: 2560px) {
+  .full-size-image-container img {
+    height: 40vh; /* Fixed height for laptops */
   }
 }
 
 /* Responsive Adjustments for Tablets (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .layout-container {
-    flex-wrap: wrap; /* Allow wrapping for medium screens */
-  }
-
-  .left-side-container, .middle-content-container {
-    width: 100%; /* Full width for better readability */
-    height: auto; /* Allow content height to grow dynamically */
-    padding: 10px; /* Reduced padding for medium screens */
+  .full-size-image-container img {
+    height: 40vh; /* Fixed height for tablets */
   }
 }
 
-/* Small Screens (Phones, 767px and below) */
+/* Responsive Adjustments for Phones (Below 768px) */
 @media (max-width: 767px) {
-  .image-container img {
-    height: 40%; /* Set the height to 40% on phone screens */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-  }
-  .right-content{
-    width: 100%; /* Ensure table takes full width on phone screens */
-    margin: 0; /* Remove any margins */
-    padding: 0; /* Remove any padding */
-  }
   .layout-container {
-    flex-direction: column; /* Stack sections vertically */
-    gap: 0; /* No gap for small screens */
-    height: auto; /* Allow dynamic height */
+    flex-direction: column; /* Stack vertically */
+    gap: 10px;
   }
 
-  /* Left Side - Full Width */
   .left-side-container {
-    width: 100%; /* Full width */
-    padding: 0; /* No padding */
-    margin: 0; /* Remove margin */
-    order: 1; /* First item */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    order: 2;
   }
 
-  /* Middle Content - Full Width */
-  .middle-content-container {
-    width: 100%; /* Full width */
-    padding: 0; /* No padding */
-    margin: 0; /* Remove margin */
-    order: 2; /* Second item */
+  .right-content {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    order: 1;
   }
 
-  /* Tables - Full Width */
-  table, .table4-container {
-    margin: 0; /* Remove margin around tables */
-    padding: 0; /* No padding */
-    width: 100%; /* Full width */
-  }
-}
-
-
-/* Additional Fix for Very Small Phones (Below 430px screen width) */
-@media (max-width: 430px) {
-  .layout-container {
-    flex-direction: column; /* Stack sections vertically */
-    gap: 0; /* No gap for very small screens */
+  .full-size-image-container img {
+    height: 40vh; /* Same height for phones */
   }
 
-  .table2-container, .table3-container, .table4-container {
-    display: block; /* Ensure visibility */
-    width: 100%; /* Full width */
-    margin: 0; /* No margin */
-    padding: 0; /* No padding */
-  }
-}
-
-
-/* Additional Fix for Small Phones (Below 430px screen width) */
-@media (max-width: 430px) {
-  .layout-container {
-    flex-direction: column; /* Stack sections vertically */
-    gap: 5px; /* Reduced gap for very small screens */
-  }
-
-  .table2-container, .table3-container {
-    position: fixed;
-    display: none !important; /* Hide tables for very small screens */
+  .text-overlay {
+    font-size: 14px; /* Adjust font size */
+    padding: 5px;
   }
 }
