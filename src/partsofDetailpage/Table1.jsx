@@ -6,7 +6,8 @@ function Table1({ containerHeight = "auto" }) {
       <div
         style={{
           backgroundColor: "#EDEDED", // Light background
-          width: "300px", // Small container width
+          width: "100%", // Full container width on phone screen
+          maxWidth: "600px", // Optional: Limit max width for large screens
           height: containerHeight, // Dynamic height
           padding: "15px", // Inner spacing
           margin: "10px auto", // Center the container horizontally
@@ -23,8 +24,7 @@ function Table1({ containerHeight = "auto" }) {
           <li>Azure Cost Optimization Tools</li>
           <li>Factors Affecting Azure Cost Optimization</li>
           <li>Conclusion</li>
-      </ul>
-
+        </ul>
       </div>
     </>
   );

@@ -12,13 +12,13 @@ function Layout() {
       {/* Full-sized image with centered text overlay */}
       <div className="full-size-image-container">
         <img
-          src="https://dreamypixel.com/wp-content/uploads/2016/01/sunrise-in-the-hills.jpg" // Replace with your image URL
+          src="https://dreamypixel.com/wp-content/uploads/2016/01/sunrise-in-the-hills.jpg"
           alt="Full Size Content"
           className="full-size-image"
         />
         <div className="text-overlay">
-          <h1>Blog</h1> {/* "Blog" text centered on the image */}
-          <p className="home-blog">Home / Blog</p> {/* "Home / Blog" text below "Blog" */}
+          <h1>Blog</h1>
+          <p className="home-blog">Home / Blog</p>
         </div>
       </div>
 

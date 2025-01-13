@@ -7,7 +7,8 @@ function Table2({ containerHeight = "150px" }) {
         className='container'
         style={{
           backgroundColor: "#D1CECEFF", // Light background color
-          width: "310px", // Fixed width
+          width: "100%", // Full container width for mobile
+          maxWidth: "600px", // Max width for larger screens
           height: containerHeight, // Dynamic height
           padding: "10px", // Inner spacing
           margin: "10px auto", // Center horizontally
@@ -18,8 +19,7 @@ function Table2({ containerHeight = "150px" }) {
         }}>
         <p>Related Service</p>
         <h5>Cloud and DevOps</h5>
-        <p>Cloud and DevOps is a service that helps you manage and.
-        </p>
+        <p>Cloud and DevOps is a service that helps you manage and.</p>
       </div>
     </>
   );

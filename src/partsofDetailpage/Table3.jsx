@@ -7,19 +7,19 @@ function Table3({ containerWidth = "100%", containerHeight = "auto" }) {
         className='container'
         style={{
           backgroundColor: "#D1CECEFF",
-          width: 310 , // Dynamic width
+          width: "100%", // Full container width for mobile
+          maxWidth: "600px", // Max width for larger screens
           height: containerHeight, // Dynamic height
-          maxWidth: "400px", // Set a max width
-          minHeight: "150px", // Set a minimum height
+          minHeight: "150px", // Minimum height
           padding: "10px",
           margin: "10px auto", // Center horizontally
           borderRadius: "8px", // Add rounded corners
-          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" // Add a subtle shadow
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Add a subtle shadow
         }}
       >
         <h5>Subscribe to our Newsletter</h5>
         <p>
-        Signup for our newsletter and join 2700+ global business executives and technology experts.
+          Signup for our newsletter and join 2700+ global business executives and technology experts.
         </p>
         <input
           type="email"
