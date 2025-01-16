@@ -4,7 +4,7 @@ import Table1 from './Table1';
 import Table2 from './Table2';
 import Table3 from './Table3';
 import Table4 from './Table4';
-import './assets/layout.css';
+import './assets/layout.css'; // Make sure this file path is correct
 
 function Layout() {
   return (
@@ -14,10 +14,7 @@ function Layout() {
         <img
           src="https://dreamypixel.com/wp-content/uploads/2016/01/sunrise-in-the-hills.jpg"
           alt="Full Size Content"
-          style={{
-            width: '100%', // Always 100% width
-            objectFit: 'cover', // Maintain aspect ratio
-          }}
+          className="header-image"
         />
         <div className="text-overlay">
           <h1>Blog</h1>
@@ -27,12 +24,12 @@ function Layout() {
 
       {/* Main Layout */}
       <div className="layout-container">
-        {/* Left Content */}
+        {/* Left Side Content (75%) */}
         <div className="left-content">
           <Outlet />
         </div>
 
-        {/* Right Content - Tables */}
+        {/* Right Side Content (25%) */}
         <div className="right-content">
           <Table1 />
           <Table2 />
@@ -45,3 +42,4 @@ function Layout() {
 }
 
 export default Layout;
+

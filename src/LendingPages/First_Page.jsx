@@ -41,19 +41,23 @@ function First_Page() {
           /* Responsive Styles */
           @media (max-width: 768px) {
             .cards-container {
-              grid-template-columns: 1fr !important; /* Single column layout */
-              padding: 10px !important; /* Reduce padding for smaller screens */
+              grid-template-columns: 1fr !important;
+              padding: 16px !important;
+              justify-items: center !important;
+              max-width: 500px !important;
+              margin: 0 auto !important;
             }
-            .cards-container .card {
-              width: 100% !important; /* Card width to take full container width */
-              margin: 0 0 20px 0 !important; /* Reduce horizontal margins */
+            .cards-container > div {
+              width: 100% !important;
+              max-width: 400px !important;
+              margin-bottom: 24px !important;
             }
           }
 
           @media (max-width: 430px) {
             .cards-container {
-              grid-template-columns: 1fr !important; /* Single column layout */
-              padding: 10px !important; /* Padding adjustments */
+              padding: 12px !important;
+              max-width: 100% !important;
             }
             .cards-container .card {
               width: 100% !important; /* Full width cards for small phones */
@@ -69,65 +73,69 @@ function First_Page() {
 const styles = {
   container: {
     display: 'grid',
-    gap: '20px',
+    gap: '24px',
     margin: '0 auto',
-    padding: '20px',
+    padding: '24px',
     maxWidth: '1200px',
-    gridTemplateColumns: 'repeat(2, 1fr)', // Display 2 cards per row by default
-    backgroundColor: '#000000', // Black background
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    backgroundColor: '#000000',
+    justifyItems: 'center',
   },
   card: {
     position: 'relative',
     width: '100%',
-    height: 'auto',
+    maxWidth: '500px',
+    height: '350px',
     cursor: 'pointer',
     overflow: 'hidden',
-    boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)', // White shadow
-    borderRadius: '8px',
+    boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)',
+    borderRadius: '12px',
     transition: 'transform 0.3s ease',
-    backgroundColor: '#1a1a1a', // Dark gray card background
+    backgroundColor: '#1a1a1a',
   },
   image: {
     width: '100%',
-    height: 'auto',
+    height: '350px',
     objectFit: 'cover',
-    filter: 'brightness(0.5)', // Darker image for better text visibility
+    filter: 'brightness(0.5)',
   },
   textContainer: {
     position: 'absolute',
     bottom: '0',
     width: '100%',
     color: 'white',
-    padding: '20px',
+    padding: '24px',
     boxSizing: 'border-box',
     textAlign: 'left',
+    background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
   },
   title: {
     margin: '0',
     fontSize: '1.5rem',
-    color: '#ffcc00', // Yellow title
+    color: '#ffcc00',
+    fontWeight: '600',
   },
   description: {
-    margin: '5px 0 0 0',
+    margin: '8px 0 0 0',
     fontSize: '1rem',
-    color: '#cccccc', // Light gray text
+    color: '#cccccc',
   },
   iconContainer: {
     position: 'absolute',
-    top: '10px',
-    right: '10px',
-    width: '50px',
-    height: '50px',
-    backgroundColor: '#0056d2', // Blue color for the button
+    top: '16px',
+    right: '16px',
+    width: '44px',
+    height: '44px',
+    backgroundColor: '#0056d2',
     borderRadius: '50%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    boxShadow: '0 4px 8px rgba(255, 255, 255, 0.2)', // Light white shadow
+    boxShadow: '0 4px 8px rgba(255, 255, 255, 0.2)',
   },
   icon: {
-    width: '30px',
-    height: '30px',
+    width: '24px',
+    height: '24px',
   },
 };
 

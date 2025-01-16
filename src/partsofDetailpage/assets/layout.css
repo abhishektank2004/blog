@@ -1,97 +1,104 @@
-/* General Layout */
+/* Reset and Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout Wrapper */
 .layout-container {
   display: flex;
-  min-height: 100vh;
-  gap: 0;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  min-height: 100vh; /* Full viewport height */
+  gap: 20px;
   overflow-y: auto;
 }
 
-/* Left Side - All Tables (25% width) */
-.left-side-container {
-  margin-top: 100px;
-  width: 25%;
-  padding: 10px;
-  box-sizing: border-box;
+/* Left Content - 75% */
+.left-content {
+  flex: 3; /* 3 parts of 4 */
+  padding: 20px;
 }
 
+/* Right Content - 25% */
 .right-content {
-  margin-right: 90px;
-  margin-top: 80px;
-  padding: 45px;
-}
-
-/* Right Side - Middle Content (75% width) */
-.middle-content-container {
-  width: 75%;
-  padding: 10px;
-  box-sizing: border-box;
+  flex: 1; /* 1 part of 4 */
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto;
-  position: relative;
+  gap: 20px;
 }
 
-/* Centered Text Overlay */
+.right-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.right-content table th,
+.right-content table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Full-Sized Image and Overlay */
+.full-size-image-container img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 40vh;
+}
+
 .text-overlay {
   position: absolute;
-  color: white;
-  font-size: 18px;
-  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-align: center;
 }
 
-/* Responsive Adjustments for Large Screens */
-@media (min-width: 2560px) {
-  .full-size-image-container img {
-    height: 40vh; /* Fixed height for large screens */
-  }
-}
+/* Responsive Adjustments */
 
-/* Responsive Adjustments for Laptops */
-@media (min-width: 1280px) and (max-width: 2560px) {
-  .full-size-image-container img {
-    height: 40vh; /* Fixed height for laptops */
-  }
-}
-
-/* Responsive Adjustments for Tablets (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .full-size-image-container img {
-    height: 40vh; /* Fixed height for tablets */
-  }
-}
-
-/* Responsive Adjustments for Phones (Below 768px) */
-@media (max-width: 767px) {
+/* Large Screens (Desktops) */
+@media (min-width: 1024px) {
   .layout-container {
-    flex-direction: column; /* Stack vertically */
-    gap: 10px;
+    flex-direction: row;
   }
 
-  .left-side-container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    order: 2;
+  .left-content {
+    flex: 3; /* 75% */
   }
 
   .right-content {
+    flex: 1; /* 25% */
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .layout-container {
+    flex-direction: row;
+  }
+
+  .left-content {
+    flex: 2; /* Adjust to 2/3 width */
+  }
+
+  .right-content {
+    flex: 1; /* Adjust to 1/3 width */
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 767px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .left-content,
+  .right-content {
     width: 100%;
-    margin: 0;
-    padding: 10px;
-    order: 1;
-  }
-
-  .full-size-image-container img {
-    height: 40vh; /* Same height for phones */
-  }
-
-  .text-overlay {
-    font-size: 14px; /* Adjust font size */
-    padding: 5px;
   }
 }
