@@ -6,7 +6,7 @@ function Table3({ containerWidth = "100%", containerHeight = "auto" }) {
       <div
         className='container'
         style={{
-          backgroundColor: "#D1CECEFF",
+          backgroundColor: "#3C3131FF",
           width: "100%", // Full container width for mobile
           maxWidth: "600px", // Max width for larger screens
           height: containerHeight, // Dynamic height

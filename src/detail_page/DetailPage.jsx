@@ -1,11 +1,14 @@
 import React from 'react';
+import './ui.css'; // Ensure the path matches where your CSS file is located
 
 function DetailPage() {
   return (
     <>
       <header className="text-center">
+        <div className='center'>
         <h1>AWS Cost Optimization Best Practices</h1>
         <h5>Last Updated on 12/12/1212</h5>
+        </div>
       </header>
 
       {/* First Image with Banner */}
@@ -33,6 +36,7 @@ function DetailPage() {
               padding: '20px 40px',
               fontSize: window.innerWidth < 768 ? '1rem' : '2rem',
               borderRadius: '10px',
+              backgroundColor: 'rgba(0, 0, 0, 0)', /* Semi-transparent background */
             }}
           >
             AWS Cost Optimization Strategies

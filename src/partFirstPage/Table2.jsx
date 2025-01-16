@@ -4,14 +4,15 @@ function Teble2() {
   const containerStyle = {
     width: "100%",
     maxWidth: "450px",
-    background: "#f8f7fd",
+    background: "#333", // Dark background
     padding: "30px",
     borderRadius: "16px",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)", // Darker shadow
     fontFamily: "Arial, sans-serif",
     marginLeft: "auto",
     marginRight: "auto",
     boxSizing: "border-box",
+    color: "#fff", // White text for dark theme
   };
 
   const sectionStyle = {
@@ -21,7 +22,7 @@ function Teble2() {
   const headingStyle = {
     fontSize: "18px",
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff", // White heading text
     marginBottom: "15px",
   };
 
@@ -38,17 +39,17 @@ function Teble2() {
 
   const labelStyle = {
     fontSize: "16px",
-    color: "#333",
+    color: "#fff", // White label text
   };
 
   const countStyle = {
     fontSize: "16px",
-    color: "#666",
+    color: "#bbb", // Lighter color for counts
   };
 
   const priceStyle = {
     fontSize: "16px",
-    color: "#333",
+    color: "#fff", // White text for price
     marginTop: "15px",
   };
 
@@ -61,14 +62,14 @@ function Teble2() {
   const roundedEndStyle = {
     width: "15px",
     height: "15px",
-    backgroundColor: "#224872FF",
+    backgroundColor: "#1a73e8", // Blue color for line ends
     borderRadius: "50%",
   };
 
   const middleLineStyle = {
     flexGrow: 1,
     height: "6px",
-    backgroundColor: "#224872FF",
+    backgroundColor: "#1a73e8", // Blue color for the middle line
   };
 
   return (

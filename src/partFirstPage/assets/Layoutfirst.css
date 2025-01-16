@@ -79,7 +79,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: calc(48% - 20px); /* Four cards per row on large screens */
+    width: calc(25% - 20px); /* Four cards per row on large screens */
     box-sizing: border-box;
 }
 

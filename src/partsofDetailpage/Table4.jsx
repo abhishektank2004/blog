@@ -5,7 +5,7 @@ function Table4({ containerWidth = "100%", containerHeight = "auto" }) {
     <>
       <div
         style={{
-          backgroundColor: "#F5F5F5", // Light background for better contrast
+          backgroundColor: "#3C3131FF", // Light background for better contrast
           width: "100%", // Full container width for mobile
           maxWidth: "600px", // Max width for larger screens
           height: containerHeight, // Dynamic height
